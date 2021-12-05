@@ -136,7 +136,6 @@ export default {
 			if(tableIdx !== -1) {
 				return;
 			}
-			console.log(state.tables);
 			state.tables.push({
 				tId: table.tId,
 				tableName: table.tableName,
