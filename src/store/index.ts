@@ -1,12 +1,12 @@
 import { createStore } from 'vuex'
+import api from './modules/api'
+import table from './modules/table'
+import charts from './modules/charts'
 
 export default createStore({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
   modules: {
+		api,
+		table,
+		charts
   }
 })
