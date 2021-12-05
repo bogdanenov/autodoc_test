@@ -133,9 +133,6 @@ export default {
 		updateTables(state: StateTables, table: StateTable) {
 			const tableIdx = state.tables.findIndex((findTable: StateTable) => 
 				findTable.tId === table.tId)
-			if(tableIdx !== -1) {
-				throw new Error('tID must be unique and not repeatable')
-			}
 			state.tables.push({
 				tId: table.tId,
 				tableName: table.tableName,
