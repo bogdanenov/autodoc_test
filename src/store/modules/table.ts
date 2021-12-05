@@ -132,7 +132,11 @@ export default {
 	mutations: {
 		updateTables(state: StateTables, table: StateTable) {
 			const tableIdx = state.tables.findIndex((findTable: StateTable) => 
-				findTable.tId === table.tId)
+				findTable.tId === table.tId);
+			if(tableIdx !== -1) {
+				return;
+			}
+			console.log(state.tables);
 			state.tables.push({
 				tId: table.tId,
 				tableName: table.tableName,
